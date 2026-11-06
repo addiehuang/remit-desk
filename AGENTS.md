@@ -12,3 +12,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Everything committed MUST be in English (UK spelling): code, comments, docs, specs, ADRs, test names, commit messages, branch names, PR titles and bodies. `pnpm lang:check` enforces this for files.
 - You MAY reply to the author in their own language in chat.
+- Do NOT use em dashes (U+2014) in English prose. Use a comma, a colon, parentheses or a full stop instead. En dashes (U+2013) are allowed only in numeric and date ranges, such as 9–11 Nov.
