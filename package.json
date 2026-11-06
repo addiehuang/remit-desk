@@ -9,7 +9,10 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build", 
+    "test:unit": "vitest --project unit"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -31,7 +34,19 @@
     "jsdom": "^31.0.0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.0",
+    "storybook": "^10.6.6",
+    "@storybook/nextjs-vite": "^10.6.6",
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-vitest": "^10.6.6",
+    "@storybook/addon-a11y": "^10.6.6",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/addon-onboarding": "^10.6.6",
+    "vite": "latest",
+    "eslint-plugin-storybook": "^10.6.6",
+    "@vitest/browser-playwright": "5.1.0",
+    "@vitest/coverage-v8": "5.1.0",
+    "playwright": "latest"
   },
   "packageManager": "pnpm@10.18.3"
 }
