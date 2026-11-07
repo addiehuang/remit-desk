@@ -11,8 +11,9 @@
     "test": "vitest",
     "e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build", 
-    "test:unit": "vitest --project unit"
+    "build-storybook": "storybook build",
+    "test:unit": "vitest --project unit",
+    "lang:check": "node scripts/check-english.mjs"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -20,7 +21,12 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "latest",
     "@playwright/test": "^1.65.0",
+    "@storybook/addon-a11y": "^10.6.6",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/addon-vitest": "^10.6.6",
+    "@storybook/nextjs-vite": "^10.6.6",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
@@ -29,24 +35,18 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.2.1",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.5",
-    "jsdom": "^31.0.0",
-    "tailwindcss": "^4",
-    "typescript": "^5",
-    "vitest": "^5.1.0",
-    "storybook": "^10.6.6",
-    "@storybook/nextjs-vite": "^10.6.6",
-    "@chromatic-com/storybook": "latest",
-    "@storybook/addon-vitest": "^10.6.6",
-    "@storybook/addon-a11y": "^10.6.6",
-    "@storybook/addon-docs": "^10.6.6",
-    "@storybook/addon-onboarding": "^10.6.6",
-    "vite": "latest",
-    "eslint-plugin-storybook": "^10.6.6",
     "@vitest/browser-playwright": "5.1.0",
     "@vitest/coverage-v8": "5.1.0",
-    "playwright": "latest"
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "eslint-plugin-storybook": "^10.6.6",
+    "jsdom": "^31.0.0",
+    "playwright": "latest",
+    "storybook": "^10.6.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "latest",
+    "vitest": "^5.1.0"
   },
   "packageManager": "pnpm@10.18.3"
 }
