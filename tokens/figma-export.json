@@ -1,0 +1,367 @@
+{
+  "tokens": {
+    "Primitive": {
+      "white": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Pure white. The on- colour for every solid fill. Not for direct use: reference a Semantic role."
+      },
+      "slate": {
+        "1": {
+          "value": "#fcfcfd",
+          "type": "color",
+          "description": "Radix slate 1. Page background. Not for direct use: reference a Semantic role."
+        },
+        "3": {
+          "value": "#f0f0f3",
+          "type": "color",
+          "description": "Radix slate 3. Subdued surface. Not for direct use: reference a Semantic role."
+        },
+        "7": {
+          "value": "#cdced6",
+          "type": "color",
+          "description": "Radix slate 7. Divider weight. Not for direct use: reference a Semantic role."
+        },
+        "10": {
+          "value": "#80838d",
+          "type": "color",
+          "description": "Radix slate 10. Control boundaries at 3.69:1, lighter than slate/11 without dropping below 3:1."
+        },
+        "11": {
+          "value": "#60646c",
+          "type": "color",
+          "description": "Radix slate 11. Low contrast text. Not for direct use: reference a Semantic role."
+        },
+        "12": {
+          "value": "#1c2024",
+          "type": "color",
+          "description": "Radix slate 12. High contrast text. Not for direct use: reference a Semantic role."
+        }
+      },
+      "indigo": {
+        "10": {
+          "value": "#3358d4",
+          "type": "color",
+          "description": "Radix indigo 10. Deeper than the step 9 solid, which read too bright. Not for direct use: reference a Semantic role."
+        },
+        "12": {
+          "value": "#1f2d5c",
+          "type": "color",
+          "description": "Radix indigo 12. Ink navy. Not for direct use: reference a Semantic role."
+        }
+      },
+      "red": {
+        "11": {
+          "value": "#ce2c31",
+          "type": "color",
+          "description": "Radix red 11. Step 10 gave only 4.26:1 with white text. Not for direct use: reference a Semantic role."
+        }
+      },
+      "jade": {
+        "11": {
+          "value": "#208368",
+          "type": "color",
+          "description": "Radix jade 11. Not for direct use: reference a Semantic role."
+        }
+      },
+      "amber": {
+        "9": {
+          "value": "#ffc53d",
+          "type": "color",
+          "description": "Radix amber 9. Designed for dark foreground text. Not for direct use: reference a Semantic role."
+        },
+        "12": {
+          "value": "#4f3422",
+          "type": "color",
+          "description": "Radix amber 12. Not for direct use: reference a Semantic role."
+        }
+      }
+    },
+    "Semantic": {
+      "color": {
+        "surface": {
+          "$alias": "{Primitive.slate/1}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Default page and card background.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "surface-variant": {
+          "$alias": "{Primitive.slate/3}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Subdued background: table header rows, inset panels.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "on-surface": {
+          "$alias": "{Primitive.slate/12}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Primary text on surface.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "on-surface-variant": {
+          "$alias": "{Primitive.slate/11}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Secondary text: hints, captions, metadata.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "outline": {
+          "$alias": "{Primitive.slate/7}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Dividers and decorative separators only, at 1.53:1 against surface. WCAG 1.4.11 does not cover a decorative separator, but it does cover the boundary of a control, so a control boundary MUST use outline-strong.",
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "outline-strong": {
+          "$alias": "{Primitive.slate/10}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Boundary of any control the user must be able to locate: input and select borders. 3.69:1 against surface and 3.33:1 against surface-variant.",
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "primary": {
+          "$alias": "{Primitive.indigo/10}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Links and the primary action.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "on-primary": {
+          "$alias": "{Primitive.white}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Text and icons on a primary fill.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "primary-hover": {
+          "$alias": "{Primitive.indigo/12}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Hover and active state of primary.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ]
+        },
+        "focus": {
+          "$alias": "{Primitive.slate/12}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Focus indicator, outer ring. 15.98:1 against surface, but only 2.72:1 against a primary fill, so the indicator MUST be two toned: an outer ring in focus with a 2px inner gap in on-focus. The white gap carries the contrast against a coloured control, 6.02:1 on primary. Never remove the focus indicator, only restyle it.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "on-focus": {
+          "$alias": "{Primitive.white}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Focus indicator, inner gap. Sits between the control and the outer focus ring so the indicator stays visible on a coloured fill.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "danger": {
+          "$alias": "{Primitive.red/11}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Errors, and a payee name that does not match.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "on-danger": {
+          "$alias": "{Primitive.white}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Text and icons on a danger fill.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "success": {
+          "$alias": "{Primitive.jade/11}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Confirmed, and a payee name that matches.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ]
+        },
+        "on-success": {
+          "$alias": "{Primitive.white}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Text and icons on a success fill.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "warning": {
+          "$alias": "{Primitive.amber/9}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Needs a decision, such as a close payee name match.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "on-warning": {
+          "$alias": "{Primitive.amber/12}",
+          "$resolvedValue": "$alias-unresolved",
+          "type": "color",
+          "description": "Text and icons on a warning fill.",
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        }
+      },
+      "space": {
+        "xs": {
+          "value": 4,
+          "type": "float",
+          "description": "4px. Gap between a label and its control. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "sm": {
+          "value": 8,
+          "type": "float",
+          "description": "8px. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "md": {
+          "value": 16,
+          "type": "float",
+          "description": "16px. Default gap and padding. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "lg": {
+          "value": 24,
+          "type": "float",
+          "description": "24px. Between form groups. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "xl": {
+          "value": 40,
+          "type": "float",
+          "description": "40px. Between page sections. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "GAP"
+          ]
+        }
+      },
+      "radius": {
+        "none": {
+          "value": 0,
+          "type": "float",
+          "description": "Square, deliberately. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "sm": {
+          "value": 4,
+          "type": "float",
+          "description": "4px. Inputs, buttons, badges. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "md": {
+          "value": 8,
+          "type": "float",
+          "description": "8px. Cards, dialogs, tables. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        }
+      },
+      "text": {
+        "caption": {
+          "value": 14,
+          "type": "float",
+          "description": "14px. Hints and metadata. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        "body": {
+          "value": 16,
+          "type": "float",
+          "description": "16px. Body and labels. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        "heading-sm": {
+          "value": 20,
+          "type": "float",
+          "description": "20px. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        "heading-md": {
+          "value": 24,
+          "type": "float",
+          "description": "24px. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        "heading-lg": {
+          "value": 32,
+          "type": "float",
+          "description": "32px. Page title. Compiled to rem by scripts/build-tokens.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "exportedAt": "2026-11-09T10:25:07.695Z",
+    "editedBy": "user"
+  }
+}

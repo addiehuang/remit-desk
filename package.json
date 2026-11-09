@@ -13,7 +13,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test:unit": "vitest --project unit",
-    "lang:check": "node scripts/check-english.mjs"
+    "lang:check": "node scripts/check-english.mjs",
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "tokens:check": "node scripts/check-token-parity.mjs"
   },
   "dependencies": {
     "next": "16.4.5",
