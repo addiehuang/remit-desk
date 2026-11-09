@@ -13,5 +13,19 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Everything committed MUST be in English (UK spelling): code, comments, docs, specs, ADRs, test names, commit messages, branch names, PR titles and bodies. `pnpm lang:check` enforces this for files.
 - You MAY reply to the author in their own language in chat.
 - Do NOT use em dashes (U+2014) in English prose. Use a comma, a colon, parentheses or a full stop instead. En dashes (U+2013) are allowed only in numeric and date ranges, such as 9–11 Nov.
-- Do NOT use em dashes in any English content. Use a comma, colon, bracket or
-  full stop instead. En dashes in number and date ranges are fine.
+
+## Styling
+
+- Colours MUST come from a theme variable: a Tailwind utility such as `bg-background`, or `var(--color-*)` in CSS.
+- You MUST NOT write a hex code, `rgb()`, `hsl()` or `oklch()` value anywhere under `src`. `pnpm lint` enforces this.
+
+## Components
+
+- Pages under `src/app` MUST NOT use a native `button`, `input`, `select` or `textarea`. Use the design system component, or build it under `src/components` first.
+- Interactive behaviour MUST sit on a real interactive element. A `div` or `span` carrying `onClick` is not acceptable.
+- Every component MUST have a spec in `specs/components/` before implementation starts.
+
+## Tests
+
+- While `.claude/lock-tests` exists the tests are the fixed answer key. You MUST NOT edit a test file, and you MUST NOT remove the lock. Change the implementation instead.
+- If an acceptance criterion looks wrong, stop and tell the author rather than editing the test.

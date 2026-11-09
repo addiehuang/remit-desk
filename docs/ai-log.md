@@ -22,13 +22,14 @@ Gates, from cheapest to most expensive:
 | # | Date | What the agent did | Gate that caught it | Became a rule? |
 |---|---|---|---|---|
 | 1 | 2026-11-06 | Wrote two smoke tests to verify the test setup after being asked to write no tests. Announced it beforehand and removed them afterwards. Judged reasonable, but recorded as the baseline for "agent adds work that was not requested". | human | not yet |
+| 2 | 2026-11-09 | Added the accessibility rule set by spreading the whole `jsxA11y.flatConfigs.strict` object into the flat config. ESLint refused to load any config at all, because `eslint-config-next` had already registered the `jsx-a11y` plugin and flat config forbids defining a plugin name twice. Taking only `.rules` fixed it. | lint | no, recorded as a comment in `eslint.config.mjs` |
 
 ## Counts by gate
 
 | Gate | Caught |
 |---|---|
 | hook | 0 |
-| lint | 0 |
+| lint | 1 |
 | typecheck | 0 |
 | unit | 0 |
 | storybook | 0 |
