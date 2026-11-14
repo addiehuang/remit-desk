@@ -9,6 +9,7 @@
   --p-indigo-12: #1f2d5c;
   --p-jade-11: #208368;
   --p-red-11: #ce2c31;
+  --p-red-12: #641723;
   --p-slate-1: #fcfcfd;
   --p-slate-10: #80838d;
   --p-slate-11: #60646c;
@@ -22,6 +23,7 @@
    var() pointing at a primitive and inline resolves it at build time. */
 @theme inline {
   --color-danger: var(--p-red-11);
+  --color-danger-hover: var(--p-red-12);
   --color-focus: var(--p-slate-12);
   --color-on-danger: var(--p-white);
   --color-on-focus: var(--p-white);
@@ -44,6 +46,7 @@
   --spacing-lg: 1.5rem;
   --spacing-md: 1rem;
   --spacing-sm: 0.5rem;
+  --spacing-target: 2.75rem;
   --spacing-xl: 2.5rem;
   --spacing-xs: 0.25rem;
   --text-body: 1rem;
