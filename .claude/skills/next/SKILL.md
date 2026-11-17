@@ -38,7 +38,7 @@ checklist.
 
 ## Reply
 
-Write the reply in the language the author uses in chat. Never mention a file, branch, command or term without saying
+Write the reply in plain UK English, in short sentences. Never mention a file, branch, command or term without saying
 in a few plain words what it is. Use three headed parts, in this order.
 
 ### 1. Where we are
@@ -49,7 +49,7 @@ milestone and its due date.
 Then, if any file is changed, uncommitted or unpushed, a table with four
 columns: the file, what it is in one plain phrase (for example "the Button
 spec, the answer key the tests are written from"), what the author did to it,
-and which stage it is in. Show the three stages above the table, translated:
+and which stage it is in. Show the three stages above the table:
 
 ```
 1 edited and saved (this computer only) -> 2 committed (saved in the version history) -> 3 pushed (on GitHub)
