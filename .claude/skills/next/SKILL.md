@@ -10,9 +10,8 @@ The first command of every session. Project state lives in the repository and
 in GitHub issues, never in a chat, so this command rebuilds it from those two
 sources instead of from memory or an old handover note.
 
-The author is a designer who is still learning git and the terminal. Write so
-that someone who has not opened the repository for a week understands every
-line without asking a follow-up question.
+Write for a reader who has not opened the repository for a week: every line
+should make sense without a follow-up question.
 
 ## Gather
 
@@ -39,8 +38,7 @@ checklist.
 
 ## Reply
 
-Write the reply in Traditional Chinese unless the author writes to you in
-another language. Never mention a file, branch, command or term without saying
+Write the reply in the language the author uses in chat. Never mention a file, branch, command or term without saying
 in a few plain words what it is. Use three headed parts, in this order.
 
 ### 1. Where we are
