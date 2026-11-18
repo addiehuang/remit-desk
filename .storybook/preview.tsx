@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/nextjs-vite'
 
+import '../src/app/globals.css'
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -13,7 +15,8 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
+      // AC-19 in specs/components/button.md: every story has zero violations.
+      test: 'error'
     }
   },
 };

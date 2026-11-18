@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs-vite';
+import tailwindcss from '@tailwindcss/vite';
 
 const config: StorybookConfig = {
   "stories": [
@@ -14,6 +15,13 @@ const config: StorybookConfig = {
   "framework": "@storybook/nextjs-vite",
   "staticDirs": [
     "../public"
-  ]
+  ],
+  // Next.js runs Tailwind through @tailwindcss/turbopack. Storybook builds with
+  // Vite, so it needs the Vite plugin to turn globals.css into utilities and
+  // token variables.
+  async viteFinal(config) {
+    config.plugins = [...(config.plugins ?? []), tailwindcss()];
+    return config;
+  }
 };
 export default config;
