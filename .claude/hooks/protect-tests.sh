@@ -24,6 +24,8 @@ if [ "$tool" = "Bash" ] && printf '%s' "$command" | grep -q 'lock-tests'; then
   deny "Only the author removes the lock."
 fi
 
+# Story files hold the play-function tests for the browser acceptance criteria,
+# so they are part of the answer key too.
 case "$file" in
-  *.test.ts | *.test.tsx | *e2e/*.spec.ts) deny "Refusing to modify $file." ;;
+  *.test.ts | *.test.tsx | *e2e/*.spec.ts | *.stories.ts | *.stories.tsx) deny "Refusing to modify $file." ;;
 esac

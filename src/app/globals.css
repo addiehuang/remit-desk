@@ -7,3 +7,16 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+/* The one focus indicator for the whole site (ADR-001). A 3px outer ring in
+   --color-focus, and a 2px inner ring in --color-on-focus that fills the gap
+   between the control and the outline. The two widths are local values on
+   purpose: Tailwind has no outline width namespace, so they are not tokens.
+   Components apply the class and never set a ring width themselves. */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-on-focus);
+  }
+}
