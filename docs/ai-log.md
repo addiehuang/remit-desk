@@ -23,6 +23,7 @@ Gates, from cheapest to most expensive:
 |---|---|---|---|---|
 | 1 | 2026-11-06 | Wrote two smoke tests to verify the test setup after being asked to write no tests. Announced it beforehand and removed them afterwards. Judged reasonable, but recorded as the baseline for "agent adds work that was not requested". | human | not yet |
 | 2 | 2026-11-09 | Added the accessibility rule set by spreading the whole `jsxA11y.flatConfigs.strict` object into the flat config. ESLint refused to load any config at all, because `eslint-config-next` had already registered the `jsx-a11y` plugin and flat config forbids defining a plugin name twice. Taking only `.rules` fixed it. | lint | no, recorded as a comment in `eslint.config.mjs` |
+| 3 | 2026-11-11 | Stated that the Figma Plugin API could rename the document file (`figma.root.name = 'Remit Desk'`) without checking the API, and put that call in the same `use_figma` script as the deletion of the stray "Number" variable (VariableID:28:12) from the Semantic collection. The rename threw "Setting the document name is currently not supported", and because Figma runs each script as one transaction, the deletion that had already succeeded was rolled back too. Found with a read-only check; the deletion was re-run as its own script, and the file was renamed by hand. | human | yes, AGENTS.md "Tools and APIs" |
 
 ## Counts by gate
 
@@ -35,7 +36,7 @@ Gates, from cheapest to most expensive:
 | storybook | 0 |
 | e2e | 0 |
 | ci | 0 |
-| human | 1 |
+| human | 2 |
 
 A rising count on the cheap gates is good news: the mistake was caught before
 it cost anything. A rising count on `human` means a gate is missing.

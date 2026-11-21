@@ -31,3 +31,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - While `.claude/lock-tests` exists the tests are the fixed answer key. You MUST NOT edit a test file, and you MUST NOT remove the lock. Change the implementation instead.
 - If an acceptance criterion looks wrong, stop and tell the author rather than editing the test.
+
+## Tools and APIs
+
+- Before you rely on, or tell the author, that a tool, library or API behaves a certain way, you MUST check its documentation or type definitions first, and say where you checked. If you cannot check, say that it is unverified.
