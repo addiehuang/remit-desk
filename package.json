@@ -10,6 +10,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest",
     "e2e": "playwright test",
+    "test:a11y": "playwright test -c playwright.storybook.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test:unit": "vitest --project unit",

@@ -4,6 +4,8 @@ const baseURL = "http://localhost:3000";
 
 export default defineConfig({
   testDir: "./e2e",
+  // e2e/storybook runs against Storybook, through playwright.storybook.config.ts.
+  testIgnore: "storybook/**",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
